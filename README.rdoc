@@ -1,28 +1,6 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is just a demonstration application of how to use Chart.js with Ruby using the Ruby on Rails web framework. 
+The application deals with plotting out the bar and pie charts of the prices of the items of a hypothetical sports store. The bars and sectors of the charts are colored based on the color provided for the item. For example, if you added a hockey puck and you specify that its color is black, then the bar or sector representing hockey puck would be black. 
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.

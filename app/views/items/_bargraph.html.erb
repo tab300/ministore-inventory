@@ -1,0 +1,25 @@
+<script>
+  var ctx = document.getElementById("myChart");
+  var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+          labels: <%= raw @items.pluck(:name).to_json %> ,
+          datasets: [{
+              label: '',
+              data:<%= raw @items.pluck(:price).to_json %>,
+              backgroundColor:<%= raw @items.pluck(:color).to_json %>,
+              borderColor:<%= raw @items.pluck(:color).to_json %>,
+              borderWidth: 1
+          }]
+      },
+      options: {
+          scales: {
+              yAxes: [{
+                  ticks: {
+                      beginAtZero:true
+                  }
+              }]
+          }
+      }
+  });
+</script>

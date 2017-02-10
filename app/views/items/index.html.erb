@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+
+<h1 id="store">Store Inventory</h1><br><br>
+
+<div class="col-md-6">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Bar Chart of the Inventory</h3>
+    </div>
+    <div class="panel-body"><canvas id="myChart" border="solid" height="200"></canvas></div>
+  </div>
+</div>
+
+<div class="col-md-6">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Pie Chart of the Inventory</h3>
+    </div>
+    <div class="panel-body"><canvas id="myPieChart" border="solid" height="200"></canvas></div>
+  </div>
+</div>
+<br><br>
+
+
+<% @items.each do |item| %>
+  <span><strong><%= item.name %></strong> - <span>$<%= item.price.to_i %> - <%= item.color %></span>
+    <span><%= button_to item, method: :delete, data: { confirm: 'Still want to delete this item?' } do %>
+      <span class="glyphicon glyphicon-trash"></span>
+    <% end %>
+  </span></span></span><hr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<% end %>
+<br>
+<hr>
+<br>
+
+
+<%= render 'bargraph' %>
+<%= render 'piechart' %>
